@@ -13,6 +13,9 @@
     --button-color: #f3f3f3;
     --border-color: #000000;
     --shadow-color: rgba(0,0,0,0.2);
+    --heading-font-size: 2rem;
+    --medium-font-size: 1.5rem;
+    --text-font-size: 1rem;
 
     /* Fonts */
     --font-family: 'Roboto', 'Arial, sans-serif';
@@ -108,17 +111,21 @@ header {
 /* ===== Sidebar Section ===== */
 #sidebar-section {
     position: fixed;
-    width: 18rem; /* was 15em */
-    height: 80vh;
+    top: 4rem;
+    bottom: 2rem;
+    width: 10rem; /* was 15em */
+    /* height: calc(100vh - 4rem - 2rem); */
     text-align: center;
     border-right: 3px solid var(--border-color);
     padding-right: 2rem;
-    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow-y: auto;
 
     @scope (picture) {
         img {
-            width: 200px;  /* was 150px */
-            height: 200px; /* was 150px */
+            width: 150px;  /* was 150px */
+            height: 150px; /* was 150px */
             border-radius: 50%;
             border: 2px solid var(--border-color);
             object-fit: cover;
@@ -127,14 +134,15 @@ header {
     }
 
     #text-info h2 {
-        font-size: 1.75rem; /* was 1.25rem */
+        font-size: 1.25rem; /* was 1.25rem */
         margin: 0.5rem 0;
     }
 
     #text-info p {
-        font-size: 1rem; /* was 0.75rem */
+        font-size: .75rem; /* was 0.75rem */
         padding: 0.5rem;
         margin-top: 10px;
+        text-align: left;
     }
 
     #media-links {
@@ -147,11 +155,11 @@ header {
         margin: 0;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem; /* was 1rem */
+        gap: 1rem; /* was 1rem */
     }
 
     #media-links .fa {
-        font-size: 1.5rem; /* was 1.25rem */
+        font-size: 1.25rem; /* was 1.25rem */
     }
 
     #media-links a {
@@ -166,8 +174,8 @@ header {
 
     #media-links a i span {
         font-family: var(--font-family);
-        margin-left: 15px; /* was 10px */
-        font-size: 1.5rem; /* was 1.25rem */
+        margin-left: 10px; /* was 10px */
+        font-size: 1rem; /* was 1.25rem */
     }
 
     #media-links a:hover {
@@ -178,17 +186,17 @@ header {
 /* ===== About Section ===== */
 #about-section {
     padding-left: 2.5rem;
-    margin-left: 20rem;
+    margin-left: 12rem;
 
     h1 {
-        font-size: 3.5rem;
+        font-size: var(--heading-font-size);
         margin-bottom: 0;
     }
 
     p {
         max-width: 50rem;
         padding: 1rem;
-        font-size: 1.5rem;
+        font-size: var(--text-font-size);
         line-height: 1.5;
         text-align: justify
     }
@@ -198,11 +206,11 @@ header {
 /* ===== Project Section ===== */
 #project-section{
     padding-left: 2.5rem;
-    margin-left: 20rem;
+    margin-left: 12rem;
     margin-bottom: 2rem;
     
     h1 {
-        font-size: 3.5rem;
+        font-size: var(--heading-font-size);
         margin-bottom: 2rem;
     }
 
@@ -229,7 +237,7 @@ header {
     }
 
     idv-project h2 {
-        font-size: 2rem;
+        font-size: var(--medium-font-size);
         margin: 0 0 1rem 0;
     }
 
@@ -263,11 +271,11 @@ header {
 /* ===== Experience Section ===== */
 #experience-section{
     padding-left: 2.5rem;
-    margin-left: 20rem;
+    margin-left: 12rem;
     margin-bottom: 2rem;
     
     h1 {
-        font-size: 3.5rem;
+        font-size: var(--heading-font-size);
         margin-bottom: 2rem;
     }
 
@@ -294,7 +302,7 @@ header {
     }
 
     idv-experience h2 {
-        font-size: 2rem;
+        font-size: var(--medium-font-size);
         margin: 0 0 1rem 0;
     }
 
@@ -320,6 +328,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    height: 2rem;
     width: 100%;
     text-align: center;
     background-color: var(--bar-color);
@@ -502,7 +511,7 @@ footer {
 }
 
 /* Media Query for Phones */
-@media (max-width: 600px) {
+@media (max-width: 450px) {
     #sidebar-section {
         span{
             display: none;
